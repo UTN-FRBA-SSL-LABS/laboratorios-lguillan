@@ -1,5 +1,6 @@
 #include "operaciones.h"
 
+//archivo .c donde de definen las operaciones que se pueden hacer
 int sumar(int a, int b) {
     return a + b;
 }
