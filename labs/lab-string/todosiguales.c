@@ -13,6 +13,17 @@
 
 int main(int argc, char *argv[]) {
     (void)argc; (void)argv;
-    /* TODO */
+    if (argv[1] == NULL) {
+        printf("1\n");
+        return 0;
+    }
+    
+    int todos_iguales = 1;
+    for (char **arg = argv + 1; *arg != NULL; arg++) {
+        if (!AreEqual(argv[1], *arg)) {
+            todos_iguales = 0;
+        }
+    }
+    printf("%d\n", todos_iguales);
     return 0;
 }
